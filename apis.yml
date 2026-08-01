@@ -1,7 +1,30 @@
 aid: percolata
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/percolata.png
 name: Percolata
-description: Percolata is a company surfaced as a portfolio company of a16z, gv and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Percolata is a Palo Alto, California predictive-analytics company that applies
+  machine learning to help retailers optimize labor scheduling and marketing
+  spend. Its platform forecasts hourly sales, in-store traffic, and takeout
+  demand to drive staffing optimization and marketing budget allocation, with
+  published claims of 4x higher forecast accuracy, 10-20% same-store sales lift,
+  and a forecast-accuracy guarantee. Named customers include 7-Eleven, Uniqlo,
+  and Telefonica. The company is backed by Andreessen Horowitz (a16z) and Google
+  Ventures (GV). Percolata does not publish a public developer portal or REST API
+  reference; its retail platform is delivered as a managed product with custom
+  application integration. The percolata.com marketing site is now served by Wix,
+  which provisions a live, first-party Model Context Protocol (MCP) endpoint and
+  an llms.txt for agentic access to public site content.
 url: https://raw.githubusercontent.com/api-evangelist/percolata/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -12,9 +35,15 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
+- Retail
+- Analytics
+- Machine Learning
+- Predictive Analytics
+- Workforce Optimization
+- Marketing Optimization
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -24,3 +53,20 @@ maintainers:
 common:
 - type: Website
   url: http://percolata.com
+- type: GitHubOrganization
+  url: https://github.com/percolata
+- type: MCPServer
+  url: mcp/percolata-mcp.yml
+- type: LLMsTxt
+  url: llms/percolata-llms.txt
+- type: DomainSecurity
+  url: security/percolata-domain-security.yml
+- type: Support
+  url: https://www.percolata.com/contact-form
+- type: PrivacyPolicy
+  url: https://www.percolata.com/terms-of-policy
+x-enrichment:
+  date: '2026-07-20'
+  status: nochange
+  artifacts_added: 0
+  pass: local-v1
