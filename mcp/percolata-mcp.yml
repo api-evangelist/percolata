@@ -2,13 +2,10 @@ generated: '2026-07-20'
 method: searched
 status: published
 source: https://percolata.com/llms.txt
-notes: >-
-  percolata.com is served by Wix, which provisions a first-party Site MCP
-  endpoint and an llms.txt for the domain. The MCP server is live and requires
-  no authentication; it exposes only public site content plus a generic
-  bridge to any Wix business-solution APIs installed on the site. It is a
-  Wix-platform server bound to the Percolata domain, not a bespoke Percolata
-  retail-analytics API.
+notes: percolata.com is served by Wix, which provisions a first-party Site MCP endpoint and an llms.txt
+  for the domain. The MCP server is live and requires no authentication; it exposes only public site content
+  plus a generic bridge to any Wix business-solution APIs installed on the site. It is a Wix-platform
+  server bound to the Percolata domain, not a bespoke Percolata retail-analytics API.
 server:
   name: percolata-site-mcp
   platform: Wix Site MCP
@@ -17,17 +14,26 @@ server:
   authentication: none
   docs: https://dev.wix.com/docs/develop-websites/articles/get-started/about-the-wix-site-mcp
 tools:
-  - name: GetBusinessDetails
-    description: Retrieves business and site details such as timezone, email, phone, and address.
-  - name: SearchInSite
-    description: Searches the site for information (searchTerm).
-  - name: SearchSiteApiDocs
-    description: Retrieves API documentation for the Wix business solutions installed on this site (searchTerm).
-  - name: GenerateVisitorToken
-    description: Creates a new visitor session and obtains a visitor access token; call before CallWixSiteAPI.
-  - name: CallWixSiteAPI
-    description: Calls API methods on the site on a visitor's behalf (visitorToken, url, method, body).
-  - name: ReadFullDocsArticle
-    description: Fetches a complete article from the Wix developer documentation portal (articleUrl).
-  - name: ReadFullDocsMethodSchema
-    description: Fetches the full schema for a Wix API method; call before CallWixSiteAPI (articleUrl).
+- name: GetBusinessDetails
+  description: Retrieves business and site details such as timezone, email, phone, and address.
+- name: SearchInSite
+  description: Searches the site for information (searchTerm).
+- name: SearchSiteApiDocs
+  description: Retrieves API documentation for the Wix business solutions installed on this site (searchTerm).
+- name: GenerateVisitorToken
+  description: Creates a new visitor session and obtains a visitor access token; call before CallWixSiteAPI.
+- name: CallWixSiteAPI
+  description: Calls API methods on the site on a visitor's behalf (visitorToken, url, method, body).
+- name: ReadFullDocsArticle
+  description: Fetches a complete article from the Wix developer documentation portal (articleUrl).
+- name: ReadFullDocsMethodSchema
+  description: Fetches the full schema for a Wix API method; call before CallWixSiteAPI (articleUrl).
+deployment:
+  mode: none
+  endpoint: https://www.percolata.com/_api/mcp
+  verified: probed
+  probe: dead
+  note: the endpoint this manifest claimed did not answer; recorded as none rather than deleted so the
+    claim stays auditable
+  checked: '2026-08-12'
+  source: catalog MCP census
